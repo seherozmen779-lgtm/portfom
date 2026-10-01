@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -13,15 +14,28 @@ export default function Navbar() {
   ];
 
   return (
-SÖ.
+    <nav>
+      <div>
+        <Link href="/">Seher Özmen</Link>
 
-{navItems.map((item) => {
-const isActive = pathname === item.path;
-return (
+        <div>
+          {navItems.map((item) => {
+            const isActive = pathname === item.path;
 
-  {item.name}
-);
-})}
-
-);
+            return (
+              <Link
+                key={item.path}
+                href={item.path}
+                style={{
+                  fontWeight: isActive ? "bold" : "normal",
+                }}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </nav>
+  );
 }

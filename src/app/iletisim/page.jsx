@@ -1,20 +1,19 @@
 export default function Iletisim() {
   return (
-İletişime Geç
+    <main>
+        <h1>İletişim</h1>
+        <p>
+
 Projeler, iş birlikleri veya sorularınız için benimle iletişime geçebilirsiniz.
-
-📧
-
-E-posta
-
-
+</p>
+<h2>E-posta</h2>
+<a
+href="mailto:seherozmen779@gmail.com">
 seherozmen779@gmail.com
-
-Adınız
-
-Mesajınız
-
-Mesaj Gönder
+</a>
+</main>
 
 );
 }
+
+
