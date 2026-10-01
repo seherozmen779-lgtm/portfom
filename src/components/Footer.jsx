@@ -1,6 +1,9 @@
 export default function Footer() {
   return (
-© {new Date().getFullYear()} Seher Özmen. Tüm hakları saklıdır.
-
-);
+    <footer>
+      <p>
+        © {new Date().getFullYear()} Seher Özmen. Tüm hakları saklıdır.
+      </p>
+    </footer>
+  );
 }

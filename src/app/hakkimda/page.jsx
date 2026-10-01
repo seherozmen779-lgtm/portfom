@@ -1,3 +1,4 @@
+
 export default function Hakkimda() {
   const skills = [
     { name: "Python / Pandas / NumPy", category: "Veri Analizi" },
@@ -9,18 +10,35 @@ export default function Hakkimda() {
   ];
 
   return (
-Hakkımda
-Büyük Veri Analisti öğrencisi olarak karmaşık veri setlerini analiz etmek, makine öğrenmesi modelleri geliştirmek ve bu süreçleri web tabanlı arayüzlerle sunmak konusunda tutkuluyum.
+    <main>
+      <section>
+        <h1>Hakkımda</h1>
 
-Sadece veriyi işlemekle kalmayıp, veri odaklı kararların alınmasını sağlayacak görselleştirmeler ve analitik çözümler üzerinde çalışıyorum.
+        <p>
+          Büyük Veri Analisti öğrencisi olarak karmaşık veri setlerini analiz
+          etmek, makine öğrenmesi modelleri geliştirmek ve bu modelleri
+          anlamlı sonuçlara dönüştürmekle ilgileniyorum.
+        </p>
 
-Teknik Yetenekler
-{skills.map((skill, index) => (
+        <p>
+          Sadece veriyi işlemekle kalmayıp, veri odaklı kararların alınmasını
+          sağlayacak görselleştirmeler ve analitik çözümler üretmeyi
+          hedefliyorum.
+        </p>
+      </section>
 
-{skill.category}
+      <section>
+        <h2>Teknik Yetenekler</h2>
 
-{skill.name}
-))}
-
-);
+        <div>
+          {skills.map((skill, index) => (
+            <div key={index}>
+              <span>{skill.category}</span>
+              <h3>{skill.name}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }

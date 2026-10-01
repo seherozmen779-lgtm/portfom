@@ -1,35 +1,55 @@
 export default function Projeler() {
   const projects = [
     {
-      title: "Öğrenci Performans Analizi ile Not Tahmini",
-      description: "Makine öğrenmesi regresyon modelleri kullanılarak öğrencilerin akademik performanslarına göre not tahmini yapılmıştır.",
-      tags: ["Python", "Machine Learning", "Pandas", "Scikit-Learn"],
-      githubLink: "https://github.com/seherozmen",
+      title: "Hastalık Durumu Tahmini",
+      description:
+        "Makine öğrenmesi algoritmaları kullanılarak hastalık durumunun tahmin edilmesi üzerine bir veri bilimi projesi.",
+      tags: ["Python", "Pandas", "Scikit-Learn", "Machine Learning"],
     },
     {
-      title: "Oyun Oynamanın Mental Sağlığa Etkisi",
-      description: "Veri analitiği ve sınıflandırma modelleri kullanılarak oyun oynama sürelerinin bireylerin mental sağlığı üzerindeki etkileri incelenmiştir.",
-      tags: ["Python", "Data Analysis", "Seaborn"],
-      githubLink: "https://github.com/seherozmen",
+      title: "Veri Analizi ve Görselleştirme",
+      description:
+        "Veri setlerinin temizlenmesi, analiz edilmesi ve anlamlı grafiklerle görselleştirilmesi.",
+      tags: ["Python", "Pandas", "Matplotlib", "Data Analysis"],
+    },
+    {
+      title: "Kişisel Portfolio",
+      description:
+        "Projelerimi, teknik yeteneklerimi ve çalışmalarımı sergilemek için geliştirdiğim kişisel web sitesi.",
+      tags: ["React", "Next.js", "JavaScript", "CSS"],
     },
   ];
 
   return (
-    Projelerim
-{projects.map((project, idx) => (
+    <main>
+      <section>
+        <h1>Projelerim</h1>
 
-{project.title}
-{project.description}
+        <p>
+          Üzerinde çalıştığım ve geliştirdiğim veri analizi, makine öğrenmesi
+          ve web geliştirme projeleri.
+        </p>
 
-{project.tags.map((tag, tIdx) => (
+        <div>
+          {projects.map((project, idx) => (
+            <article key={idx}>
+              <h2>{project.title}</h2>
 
-{tag}
-))}
+              <p>{project.description}</p>
 
+              <div>
+                {project.tags.map((tag, tIdx) => (
+                  <span key={tIdx}>{tag}</span>
+                ))}
+              </div>
 
-GitHub'da İncele →
-
-))}
-
-);
+              <a href="#" target="_blank">
+                GitHub'da İncele →
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }

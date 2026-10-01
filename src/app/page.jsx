@@ -1,15 +1,23 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
-    Veri Analist & Geliştirici
+    <main>
+      <section>
+        <h1>Veri Analisti & Geliştirici</h1>
 
-Merhaba, Ben Seher Özmen 👋
-Büyük veri analizi, makine öğrenmesi ve modern web teknolojileri kullanarak verilerden anlamlı hikayeler ve fonksiyonel çözümler üretiyorum.
+        <h2>Merhaba, Ben Seher Özmen 👋</h2>
 
-Projelerimi İncele
+        <p>
+          Büyük veri analizi, makine öğrenmesi ve modern web teknolojileri
+          kullanarak verilerden anlamlı hikâyeler ve fonksiyonel çözümler
+          üretmeye çalışıyorum.
+        </p>
 
-İletişime Geç
+        <div>
+          <a href="/projeler">Projelerimi İncele</a>
 
-);
+          <a href="/iletisim">İletişime Geç</a>
+        </div>
+      </section>
+    </main>
+  );
 }
